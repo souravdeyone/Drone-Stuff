@@ -1,4 +1,4 @@
-from dronekit import connect, VehicleMode, LocationGlobalRelative
+from dronekit import connect, VehicleMode, LocationGlobalRelative, LocationGlobal
 from pymavlink import mavutil
 import time
 import argparse
@@ -47,7 +47,7 @@ print "Take off complete"
 
 #Travel to another coordinate
 print "Going to another coordinate"
-new_location = LocationGlobal(-34.364114, 149.166022, 3)
+new_location = LocationGlobal(-34.364114, 149.166022, 20)
 vehicle.simple_goto(new_location)
 
 #Hover for 10 seconds

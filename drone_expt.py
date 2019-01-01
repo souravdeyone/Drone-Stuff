@@ -21,13 +21,14 @@ def arm_and_takeoff(TargetAltitude):
         print "Waiting for vehicle to initialize..."
         time.sleep(1)
 
+  
     print "Arming motors"
     #Copter should now be set to guided mode
     vehicle.mode = VehicleMode("GUIDED")
     vehicle.armed = True
 
     while not vehicle.armed:
-        print "Waiting for Arming"
+        print "Waiting for Arming..."
         time.sleep(1)
 
     print "Taking off!"
@@ -36,15 +37,16 @@ def arm_and_takeoff(TargetAltitude):
     while True:
         print "Altitude: ", vehicle.location.global_relative_frame.alt
         #Break and return from function just below target altitude
-        if vehicle.location.global_relative_frame.alt >= TargetAltitude*.95:
+        if vehicle.location.global_relative_frame.alt >= TargetAltitude*0.95:
             print "Reaached target altitude"
             break
         time.sleep(1)
 
-arm_and_takeoff(50)
+arm_and_takeoff(10)
 print "Take off complete"
 
 #Travel to another coordinate
+print "Going to another coordinate"
 vehicle.simple_goto(-34.364114, 149.166022, 3)
 
 #Hover for 10 seconds

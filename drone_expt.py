@@ -45,15 +45,24 @@ def arm_and_takeoff(TargetAltitude):
 arm_and_takeoff(10)
 print "Take off complete"
 
-#Travel to another coordinate
+#Travel to another coordinate for 50 seconds
 print "Going to another coordinate"
-
 new_location = LocationGlobal(-34.36227, 155.1667, 40)
 vehicle.simple_goto(new_location)
+time.sleep(50)
+
+
+#Travel to another coordinate for 50 seconds
+print "Going to another coordinate"
+new_location = LocationGlobal(-80.36227, 62.1667, 40)
+vehicle.simple_goto(new_location)
+time.sleep(50)
+
 
 #Hover for 10 seconds
+vehicle.mode = VehicleMode("LOITER")
 print "Hovering for 10 seconds"
-time.sleep(100)
+time.sleep(10)
 
 #Start landing prodecure
 print("Now lets land")

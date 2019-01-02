@@ -47,7 +47,8 @@ print "Take off complete"
 
 #Travel to another coordinate
 print "Going to another coordinate"
-new_location = LocationGlobal(-33.364114, 149.166022, 20)
+
+new_location = LocationGlobal(-33.364114, 155.166022, 40)
 vehicle.simple_goto(new_location)
 
 #Hover for 10 seconds

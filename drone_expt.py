@@ -53,7 +53,7 @@ vehicle.simple_goto(new_location)
 
 #Hover for 10 seconds
 print "Hovering for 10 seconds"
-time.sleep(10)
+time.sleep(100)
 
 #Start landing prodecure
 print("Now lets land")

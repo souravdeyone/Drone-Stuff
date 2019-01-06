@@ -70,9 +70,9 @@ time.sleep(10)
 print "Loiter Complete"
 
 #Return to launch site
-print "Lets RTL"
-vehicle.mode = VehicleMode("RTL")
-print "RTL Complete"
+print "Lets LAND"
+vehicle.mode = VehicleMode("LAND")
+print "Land Complete"
 
 #Start landing prodecure
 #print("Now lets land")

@@ -36,6 +36,10 @@ def arm_and_takeoff(TargetAltitude):
 
     while True:
         print "Altitude: ", vehicle.location.global_relative_frame.alt
+
+        print "Longitude: ", vehicle.location.global_relative_frame.lon
+        print "Lattitude: ", vehicle.location.global_relative_frame.lat
+
         #Break and return from function just below target altitude
         if vehicle.location.global_relative_frame.alt >= TargetAltitude*0.95:
             print "Reaached target altitude"
@@ -47,6 +51,7 @@ print "Take off complete"
 
 #Travel to another coordinate for 50 seconds
 print "Going to another coordinate"
+vehicle.airspeed=10
 new_location = LocationGlobal(-34.36227, 155.1667, 40)
 vehicle.simple_goto(new_location)
 time.sleep(50)
@@ -54,6 +59,7 @@ time.sleep(50)
 
 #Travel to another coordinate for 50 seconds
 print "Going to another coordinate"
+vehicle.airspeed=10
 new_location = LocationGlobal(-80.36227, 62.1667, 40)
 vehicle.simple_goto(new_location)
 time.sleep(50)

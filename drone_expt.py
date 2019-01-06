@@ -48,7 +48,7 @@ print "Take off complete"
 
 #Travel to another coordinate for 50 seconds
 print "Going to 1st coordinate"
-vehicle.airspeed=100
+vehicle.airspeed=3
 new_location = LocationGlobalRelative(-34.36227, 155.1667, 40)
 vehicle.simple_goto(new_location)
 time.sleep(20)
@@ -56,7 +56,7 @@ print "Completed 1st coordinate"
 
 #Travel to another coordinate for 50 seconds
 print "Going to 2nd coordinate"
-vehicle.airspeed=10
+vehicle.airspeed=3
 new_location2 = LocationGlobalRelative(-80.36227, 62.1667, 40)
 vehicle.simple_goto(new_location2)
 time.sleep(20)

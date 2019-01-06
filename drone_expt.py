@@ -37,7 +37,7 @@ def arm_and_takeoff(TargetAltitude):
     while True:
         print "Altitude: ", vehicle.location.global_relative_frame.alt
 
-        print "Longitude: ", vehicle.location.global_relative_frame.lon
+        print "Longitude: ", vehicle.location.
         print "Lattitude: ", vehicle.location.global_relative_frame.lat
 
         #Break and return from function just below target altitude
@@ -70,9 +70,13 @@ vehicle.mode = VehicleMode("LOITER")
 print "Hovering for 10 seconds"
 time.sleep(10)
 
+#Return to launch site
+print "Lets RTL"
+vehicle.mode = VehicleMode("RTL")
+
 #Start landing prodecure
-print("Now lets land")
-vehicle.mode = VehicleMode("LAND")
+#print("Now lets land")
+#vehicle.mode = VehicleMode("LAND")
 
 
 #Close vehicle object

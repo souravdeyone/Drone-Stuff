@@ -64,14 +64,13 @@ print "Completed 2nd coordinate"
 
 #Hover for 10 seconds
 print "Loiter for 10 seconds"
-vehicle.mode = VehicleMode("LOITER")
-time.sleep(10)
-print "Loiter Complete"
+vehicle.mode = VehicleMode("RTL")
+print "RTL Complete"
 
 #Return to launch site
-print "Lets LAND"
-vehicle.mode = VehicleMode("LAND")
-print "Land Complete"
+#print "Lets LAND"
+#vehicle.mode = VehicleMode("LAND")
+#print "Land Complete"
 
 #Start landing prodecure
 #print("Now lets land")

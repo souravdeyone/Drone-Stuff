@@ -37,9 +37,6 @@ def arm_and_takeoff(TargetAltitude):
     while True:
         print "Altitude: ", vehicle.location.global_relative_frame.alt
 
-        print "Longitude: ", vehicle.location.
-        print "Lattitude: ", vehicle.location.global_relative_frame.lat
-
         #Break and return from function just below target altitude
         if vehicle.location.global_relative_frame.alt >= TargetAltitude*0.95:
             print "Reaached target altitude"

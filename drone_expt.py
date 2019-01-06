@@ -43,7 +43,7 @@ def arm_and_takeoff(TargetAltitude):
             break
         time.sleep(1)
 
-arm_and_takeoff(10)
+arm_and_takeoff(40)
 print "Take off complete"
 
 #Travel to another coordinate for 50 seconds

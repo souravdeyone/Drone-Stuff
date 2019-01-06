@@ -55,12 +55,20 @@ time.sleep(20)
 print "Completed 1st coordinate"
 
 #Travel to another coordinate for 50 seconds
+print "Going to 3nd coordinate"
+vehicle.airspeed=5
+new_location2 = LocationGlobalRelative(80.36227, 2.1667, 40)
+vehicle.simple_goto(new_location2)
+time.sleep(30)
+print "Completed 2nd coordinate"
+
+#Travel to another coordinate for 50 seconds
 print "Going to 2nd coordinate"
 vehicle.airspeed=3
 new_location2 = LocationGlobalRelative(-80.36227, 62.1667, 40)
 vehicle.simple_goto(new_location2)
 time.sleep(30)
-print "Completed 2nd coordinate"
+print "Completed 2nd coordinate
 
 #Hover for 10 seconds
 print "Loiter for 10 seconds"

@@ -47,29 +47,32 @@ arm_and_takeoff(10)
 print "Take off complete"
 
 #Travel to another coordinate for 50 seconds
-print "Going to another coordinate"
+print "Going to 1st coordinate"
 vehicle.airspeed=10
 new_location = LocationGlobal(-34.36227, 155.1667, 40)
 vehicle.simple_goto(new_location)
 time.sleep(50)
-
+print "Completed 1st coordinate"
 
 #Travel to another coordinate for 50 seconds
-print "Going to another coordinate"
+print "Going to 2nd coordinate"
 vehicle.airspeed=10
 new_location = LocationGlobal(-80.36227, 62.1667, 40)
 vehicle.simple_goto(new_location)
 time.sleep(50)
-
+print "Completed 2nd coordinate"
 
 #Hover for 10 seconds
+
+print "Loiter for 10 seconds"
 vehicle.mode = VehicleMode("LOITER")
-print "Hovering for 10 seconds"
 time.sleep(10)
+print "Loiter Complete"
 
 #Return to launch site
 print "Lets RTL"
 vehicle.mode = VehicleMode("RTL")
+print "RTL Complete"
 
 #Start landing prodecure
 #print("Now lets land")

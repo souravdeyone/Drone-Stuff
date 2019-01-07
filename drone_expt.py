@@ -33,6 +33,7 @@ def arm_and_takeoff(TargetAltitude):
 
     print "Taking off!"
     vehicle.simple_takeoff(TargetAltitude)
+    vehicle.flush()
 
     while True:
         print "Altitude: ", vehicle.location.global_relative_frame.alt
@@ -59,6 +60,7 @@ print "Going to 2nd coordinate"
 vehicle.airspeed=5
 new_location2 = LocationGlobalRelative(80.36227, 2.1667, 40)
 vehicle.simple_goto(new_location2)
+vehicle.flush()
 time.sleep(30)
 print "Completed 2nd coordinate"
 
@@ -67,12 +69,15 @@ print "Going to 3rd coordinate"
 vehicle.airspeed=3
 new_location2 = LocationGlobalRelative(-80.36227, 62.1667, 40)
 vehicle.simple_goto(new_location2)
+vehicle.flush()
 time.sleep(30)
 print "Completed 3nd coordinate"
 
 #Hover for 10 seconds
-print "Loiter for 10 seconds"
+print "Go into RTL"
 vehicle.mode = VehicleMode("RTL")
+vehicle.flush()
+
 print "RTL Complete"
 
 #Return to launch site

@@ -107,6 +107,16 @@ time.sleep(30)
 second_time = time.time()-first_time-start
 print(second_time)
 
+print "Going towards second point for 30 seconds (groundspeed set to 2 m/s) ..."
+point2 = LocationGlobalRelative(35.363244, 90.168801, 20)
+vehicle.simple_goto(point2, groundspeed=2)
+
+# sleep so we can see the change in map
+time.sleep(30)
+second_time = time.time()-first_time-start
+print(second_time)
+
+
 print "Returning to Launch"
 vehicle.mode = VehicleMode("RTL")
 

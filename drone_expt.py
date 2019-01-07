@@ -114,7 +114,7 @@ vehicle.simple_goto(point2, groundspeed=2)
 # sleep so we can see the change in map
 time.sleep(30)
 third_time = time.time()-second_time-first_time-start
-print(third)
+print third_time
 
 
 print "Returning to Launch"

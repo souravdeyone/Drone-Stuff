@@ -83,6 +83,7 @@ def arm_and_takeoff(TargetAltitude):
 
 
 arm_and_takeoff(10)
+
 start = time.time()
 
 print "Set default/target airspeed to 3"
@@ -103,7 +104,7 @@ vehicle.simple_goto(point2, groundspeed=10)
 
 # sleep so we can see the change in map
 time.sleep(30)
-second_time = time.time()-first_time
+second_time = time.time()-first_time-start
 print(second_time)
 
 print "Returning to Launch"

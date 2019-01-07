@@ -44,50 +44,69 @@ def arm_and_takeoff(TargetAltitude):
             break
         time.sleep(1)
 
-arm_and_takeoff(40)
-print "Take off complete"
+##arm_and_takeoff(40)
+##print "Take off complete"
+##
+###Travel to another coordinate for 50 seconds
+##print "Going to 1st coordinate"
+##vehicle.airspeed=3
+##new_location = LocationGlobalRelative(-34.36227, 155.1667, 40)
+##vehicle.simple_goto(new_location)
+##time.sleep(20)
+##print "Completed 1st coordinate"
+##
+###Travel to another coordinate for 50 seconds
+##print "Going to 2nd coordinate"
+##vehicle.airspeed=5
+##new_location2 = LocationGlobalRelative(80.36227, 2.1667, 40)
+##vehicle.simple_goto(new_location2)
+##vehicle.flush()
+##time.sleep(30)
+##print "Completed 2nd coordinate"
+##
+###Travel to another coordinate for 50 seconds
+##print "Going to 3rd coordinate"
+##vehicle.airspeed=3
+##new_location2 = LocationGlobalRelative(-80.36227, 62.1667, 40)
+##vehicle.simple_goto(new_location2)
+##vehicle.flush()
+##time.sleep(30)
+##print "Completed 3nd coordinate"
+##
+###Hover for 10 seconds
+##print "Go into RTL"
+##vehicle.mode = VehicleMode("RTL")
+##vehicle.flush()
+##
+##print "RTL Complete"
 
-#Travel to another coordinate for 50 seconds
-print "Going to 1st coordinate"
-vehicle.airspeed=3
-new_location = LocationGlobalRelative(-34.36227, 155.1667, 40)
-vehicle.simple_goto(new_location)
-time.sleep(20)
-print "Completed 1st coordinate"
 
-#Travel to another coordinate for 50 seconds
-print "Going to 2nd coordinate"
-vehicle.airspeed=5
-new_location2 = LocationGlobalRelative(80.36227, 2.1667, 40)
-vehicle.simple_goto(new_location2)
-vehicle.flush()
+
+arm_and_takeoff(10)
+
+print "Set default/target airspeed to 3"
+vehicle.airspeed = 3
+
+print "Going towards first point for 30 seconds ..."
+point1 = LocationGlobalRelative(-35.361354, 149.165218, 20)
+vehicle.simple_goto(point1)
+
+# sleep so we can see the change in map
 time.sleep(30)
-print "Completed 2nd coordinate"
 
-#Travel to another coordinate for 50 seconds
-print "Going to 3rd coordinate"
-vehicle.airspeed=3
-new_location2 = LocationGlobalRelative(-80.36227, 62.1667, 40)
-vehicle.simple_goto(new_location2)
-vehicle.flush()
+print "Going towards second point for 30 seconds (groundspeed set to 10 m/s) ..."
+point2 = LocationGlobalRelative(-35.363244, 149.168801, 20)
+vehicle.simple_goto(point2, groundspeed=10)
+
+# sleep so we can see the change in map
 time.sleep(30)
-print "Completed 3nd coordinate"
 
-#Hover for 10 seconds
-print "Go into RTL"
+print "Returning to Launch"
 vehicle.mode = VehicleMode("RTL")
-vehicle.flush()
 
-print "RTL Complete"
-
-#Return to launch site
-#print "Lets LAND"
-#vehicle.mode = VehicleMode("LAND")
-#print "Land Complete"
-
-#Start landing prodecure
-#print("Now lets land")
-#vehicle.mode = VehicleMode("LAND")
+#Close vehicle object before exiting script
+print "Close vehicle object"
+vehicle.close()
 
 
 #Close vehicle object

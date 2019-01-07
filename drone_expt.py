@@ -12,6 +12,7 @@ armAndTakeoff = False
 #Connect to the vehicle
 print 'Connecting to the vehicle on %s' %args.connect
 vehicle = connect(args.connect, baud=57600, wait_ready=True)
+vehicle.parameters['FS_GCS_ENABLE'] = 0
 
 def arm_and_takeoff(TargetAltitude):
 

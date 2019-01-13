@@ -389,7 +389,7 @@ the distance-to-target.
 print "TRIANGLE path using the standard vehicle.simple_goto() fucntion that was explored preivously"
 
 print "Set groundspeed to 5m/s"
-vechicle.groundspeed=5
+vehicle.groundspeed=5
 
 print "Position North 80 West 50"
 goto(80, -50)

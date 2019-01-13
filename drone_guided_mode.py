@@ -391,13 +391,11 @@ print "TRIANGLE path using the standard vehicle.simple_goto() fucntion that was 
 print "Set groundspeed to 5m/s"
 vehicle.groundspeed=5
 
-print "Position North 80 West 50"
-goto(80, -50)
+print "Position North 100 West 00"
+goto(150, 0)
 
 print "Position North 0 East 100"
-goto(0, 100)
+goto(0, 150)
 
-print "Position North -80 West 50"
-
-goto(-80, -50)
-
+print "Go into RTL"
+vehicle.mode = VehicleMode("RTL")
